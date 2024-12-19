@@ -2,17 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.mainnav ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 40vw;
-  margin: auto;
-  gap: auto;
-  margin-top: 1rem;
-  font-weight: bold;
-  font-size: large;
-}
+
 .hero h1 {
   font-weight: bold;
   font-size: 3rem;
@@ -23,12 +13,4 @@
   font-size: 1rem;
   text-align: center;
 }
-.blogitem h3 {
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: center;
-}
-.blogitem p {
-  font-size: 1rem;
-  text-align: center;
-}
+

@@ -19,12 +19,9 @@
   font-size: 1rem;
   text-align: center;
 }
-.blogitem h3 {
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: center;
-}
-.blogitem p {
-  font-size: 1rem;
-  text-align: center;
+
+.heroimg {
+  border: 2px solid black;
+  border-radius: 2rem;
+  object-fit: cover;
 }
