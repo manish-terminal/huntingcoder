@@ -2,6 +2,7 @@ import Head from "next/head";
 import Script from "next/script";
 import Image from "next/image";
 import styles from "../styles/globals.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,10 +13,26 @@ export default function Home() {
       <Script src="" strategy="lazyOnload"></Script>
       <nav className="mainnav">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Blog</li>
+          <Link href="/">
+            <a>
+              <li>Home</li>
+            </a>
+          </Link>
+          <Link href="/about">
+            <a>
+              <li>About</li>
+            </a>
+          </Link>
+          <Link href="/contact">
+            <a>
+              <li>Contact</li>
+            </a>
+          </Link>
+          <Link href="/blog">
+            <a>
+              <li>Blog</li>
+            </a>
+          </Link>
         </ul>
       </nav>
       <div className="hero">
