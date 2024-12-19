@@ -1,41 +1,48 @@
 import Head from "next/head";
 import Script from "next/script";
 import Image from "next/image";
-import styles from "../styles/globals.css";
+import styles from "../styles/Home.module.css";
+import styles1 from "../styles/Home1.module.css";
+import Dummy from "../components/dummy";
+
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
+      {/* <Dummy /> */}
+      <style jsx>
+        {`
+          .myspan {
+            color: red;
+          }
+        `}
+      </style>
       <Head>
         <title>Hunting Coder</title>
       </Head>
       <Script src="" strategy="lazyOnload"></Script>
-      <nav className="mainnav">
+      <nav className={styles.mainnav}>
         <ul>
           <Link href="/">
-            <a>
-              <li>Home</li>
-            </a>
+            <li>Home</li>
           </Link>
-          <Link href="/about">
-            <a>
-              <li>About</li>
-            </a>
+          <Link href="/about" scroll={false}>
+            {
+              // scroll={true} will scroll to top of the page
+            }
+
+            <li>About</li>
           </Link>
           <Link href="/contact">
-            <a>
-              <li>Contact</li>
-            </a>
+            <li>Contact</li>
           </Link>
           <Link href="/blog">
-            <a>
-              <li>Blog</li>
-            </a>
+            <li>Blog</li>
           </Link>
         </ul>
       </nav>
-      <div className="hero">
+      <div className="hero myspan">
         <h1>Hunting Coders</h1>
         <p>A blog for hunting coders by hunting coder</p>
       </div>
