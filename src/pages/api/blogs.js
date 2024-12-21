@@ -11,8 +11,21 @@ export default function handler(req, res) {
   const blogDataPath = path.join(__dirname, "../../blogData");
   console.log(blogDataPath);
 
-  fs.readdir(/Users/manishgupta/Documents/NEXTJS/4-Project1/huntingcoder/src/blogData, (err, data) => {
-    console.log(data);
-    res.status(200).json({ success: "true" });
-  });
+  fs.readdir(
+    "/Users/manishgupta/Documents/NEXTJS/4-Project1/huntingcoder/src/blogData",
+    (err, data) => {
+      // console.log(data);
+      data.forEach((item) => {
+        console.log(item);
+        fs.readFile(
+          `/Users/manishgupta/Documents/NEXTJS/4-Project1/huntingcoder/src/blogData/${item}`,
+          "utf8",
+          (err, d) => {
+            console.log(d);
+          }
+        );
+      });
+      res.status(200).json(data);
+    }
+  );
 }
